@@ -1,0 +1,7 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP LM358AN/NOPB
+D LM358AN/NOPB
+F http://www.ti.com/lit/ds/symlink/lm358-n.pdf
+$ENDCMP
+# end doc library
