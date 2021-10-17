@@ -19,7 +19,7 @@ U 1 1 616C4F2E
 P 3050 1700
 F 0 "J1" H 3158 1881 50  0000 C CNN
 F 1 "Battery" H 3158 1790 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal" H 3050 1700 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3050 1700 50  0001 C CNN
 F 3 "~" H 3050 1700 50  0001 C CNN
 	1    3050 1700
 	1    0    0    -1  
@@ -36,7 +36,7 @@ F 3 "" H 3700 1900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 5300 1700 0    50   ~ 0
-SPI-CLK
+SPI-SCK
 Text Label 5300 1800 0    50   ~ 0
 SPI-MISO
 Text Label 5300 2200 0    50   ~ 0
@@ -391,29 +391,6 @@ F 3 "" H 1450 4300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R4
-U 1 1 616F2096
-P 1000 4300
-F 0 "R4" V 900 4300 50  0000 C CNN
-F 1 "0R" V 1000 4300 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 930 4300 50  0001 C CNN
-F 3 "~" H 1000 4300 50  0001 C CNN
-	1    1000 4300
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R5
-U 1 1 616F313F
-P 1300 4300
-F 0 "R5" V 1200 4300 50  0000 C CNN
-F 1 "0R" V 1300 4300 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 1230 4300 50  0001 C CNN
-F 3 "~" H 1300 4300 50  0001 C CNN
-	1    1300 4300
-	0    1    1    0   
-$EndComp
-Connection ~ 1150 4300
-$Comp
 L Regulator_Linear:IFX27001TFV33 U3
 U 1 1 616F6C6D
 P 1750 3600
@@ -650,17 +627,6 @@ F 3 "~" H 2350 1900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 2350 1750
-$Comp
-L power:GNDA #PWR0122
-U 1 1 61738E8E
-P 2350 2450
-F 0 "#PWR0122" H 2350 2200 50  0001 C CNN
-F 1 "GNDA" H 2355 2277 50  0000 C CNN
-F 2 "" H 2350 2450 50  0001 C CNN
-F 3 "" H 2350 2450 50  0001 C CNN
-	1    2350 2450
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2350 1050 2350 800 
 Wire Wire Line
@@ -867,4 +833,20 @@ Wire Notes Line
 	8000 2550 8000 500 
 Wire Notes Line
 	8000 500  5750 500 
+Wire Wire Line
+	1450 4300 1150 4300
+Connection ~ 1150 4300
+Wire Wire Line
+	1150 4300 850  4300
+$Comp
+L power:GNDD #PWR0122
+U 1 1 6178CCE3
+P 2350 2450
+F 0 "#PWR0122" H 2350 2200 50  0001 C CNN
+F 1 "GNDD" H 2354 2295 50  0000 C CNN
+F 2 "" H 2350 2450 50  0001 C CNN
+F 3 "" H 2350 2450 50  0001 C CNN
+	1    2350 2450
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
