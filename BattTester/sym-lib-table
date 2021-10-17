@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name BattTester)(type Legacy)(uri ${KIPRJMOD}/BattTester.lib)(options "")(descr ""))
+)
