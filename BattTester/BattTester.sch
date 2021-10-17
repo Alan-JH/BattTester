@@ -35,11 +35,11 @@ F 3 "" H 4650 1900 50  0001 C CNN
 	1    4650 1900
 	1    0    0    -1  
 $EndComp
-Text Label 5500 1700 0    50   ~ 0
+Text Label 6200 1700 0    50   ~ 0
 SPI-CLK
-Text Label 5500 1800 0    50   ~ 0
+Text Label 6200 1800 0    50   ~ 0
 SPI-MISO
-Text Label 5500 1900 0    50   ~ 0
+Text Label 6200 1900 0    50   ~ 0
 SPI-CS0
 $Comp
 L power:+9V #PWR0102
@@ -752,4 +752,6 @@ F 3 "~" H 5300 3600 50  0001 C CNN
 $EndComp
 Text Notes 2900 3650 0    50   ~ 0
 Measure load current when adjusting, otherwise keep closed
+Text Notes 5450 2050 0    50   ~ 0
+Insert level shifter here
 $EndSCHEMATC
