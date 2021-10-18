@@ -17,22 +17,11 @@ $Comp
 L Connector:Conn_01x02_Male J1
 U 1 1 616C4F2E
 P 3050 1700
-F 0 "J1" H 3158 1881 50  0000 C CNN
-F 1 "Battery" H 3158 1790 50  0000 C CNN
+F 0 "J1" H 3150 1800 50  0000 C CNN
+F 1 "Battery" H 3150 1550 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3050 1700 50  0001 C CNN
 F 3 "~" H 3050 1700 50  0001 C CNN
 	1    3050 1700
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GNDA #PWR0101
-U 1 1 616C6E3A
-P 3700 1900
-F 0 "#PWR0101" H 3700 1650 50  0001 C CNN
-F 1 "GNDA" H 3705 1727 50  0000 C CNN
-F 2 "" H 3700 1900 50  0001 C CNN
-F 3 "" H 3700 1900 50  0001 C CNN
-	1    3700 1900
 	1    0    0    -1  
 $EndComp
 Text Label 5300 1700 0    50   ~ 0
@@ -89,10 +78,6 @@ Wire Wire Line
 	4550 750  4550 900 
 Wire Wire Line
 	4550 900  3700 900 
-Wire Wire Line
-	3400 1900 3400 1800
-Wire Wire Line
-	3400 1800 3250 1800
 Wire Wire Line
 	3700 1900 3700 1800
 Wire Wire Line
@@ -612,55 +597,19 @@ $EndComp
 Wire Wire Line
 	1100 1350 1100 1750
 Wire Wire Line
-	1100 1750 2350 1750
-Wire Wire Line
 	2350 1450 2350 1750
-$Comp
-L Device:R R3
-U 1 1 6173721B
-P 2350 1900
-F 0 "R3" H 2420 1946 50  0000 L CNN
-F 1 "1R, 5W" H 2420 1855 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_Power_L48.0mm_W12.5mm_P55.88mm" V 2280 1900 50  0001 C CNN
-F 3 "~" H 2350 1900 50  0001 C CNN
-	1    2350 1900
-	1    0    0    -1  
-$EndComp
-Connection ~ 2350 1750
 Wire Wire Line
 	2350 1050 2350 800 
 Wire Wire Line
 	2350 800  2800 800 
 Text Label 2800 800  0    50   ~ 0
 B+
-Connection ~ 3700 1900
 Text Label 3250 1800 0    50   ~ 0
 B-
-Text Label 3250 1700 0    50   ~ 0
-B+
 Text Label 2800 900  0    50   ~ 0
 B-
 Wire Wire Line
-	2800 900  2650 900 
-Wire Wire Line
-	2650 900  2650 950 
-$Comp
-L power:GNDA #PWR0123
-U 1 1 61740EA0
-P 2650 950
-F 0 "#PWR0123" H 2650 700 50  0001 C CNN
-F 1 "GNDA" H 2655 777 50  0000 C CNN
-F 2 "" H 2650 950 50  0001 C CNN
-F 3 "" H 2650 950 50  0001 C CNN
-	1    2650 950 
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
 	1000 1150 1100 1150
-Wire Wire Line
-	3400 1900 3700 1900
-Wire Wire Line
-	3250 1700 3700 1700
 $Comp
 L BattTester:LT1286CN8 U1
 U 1 1 616C6002
@@ -838,17 +787,122 @@ Wire Wire Line
 Connection ~ 1150 4300
 Wire Wire Line
 	1150 4300 850  4300
+Wire Wire Line
+	7800 2050 7450 2050
+Text Label 3700 1700 2    50   ~ 0
+B+
+Connection ~ 3700 1800
 $Comp
-L power:GNDD #PWR0122
-U 1 1 6178CCE3
+L power:GNDA #PWR0101
+U 1 1 616C6E3A
+P 3700 1900
+F 0 "#PWR0101" H 3700 1650 50  0001 C CNN
+F 1 "GNDA" H 3705 1727 50  0000 C CNN
+F 2 "" H 3700 1900 50  0001 C CNN
+F 3 "" H 3700 1900 50  0001 C CNN
+	1    3700 1900
+	1    0    0    -1  
+$EndComp
+Connection ~ 3700 1900
+Wire Wire Line
+	3250 1800 3700 1800
+Wire Wire Line
+	2800 900  2650 900 
+Wire Wire Line
+	2650 900  2650 950 
+$Comp
+L power:GNDA #PWR0122
+U 1 1 6171593F
+P 2650 950
+F 0 "#PWR0122" H 2650 700 50  0001 C CNN
+F 1 "GNDA" H 2655 777 50  0000 C CNN
+F 2 "" H 2650 950 50  0001 C CNN
+F 3 "" H 2650 950 50  0001 C CNN
+	1    2650 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR0123
+U 1 1 61715D3B
 P 2350 2450
-F 0 "#PWR0122" H 2350 2200 50  0001 C CNN
+F 0 "#PWR0123" H 2350 2200 50  0001 C CNN
 F 1 "GNDD" H 2354 2295 50  0000 C CNN
 F 2 "" H 2350 2450 50  0001 C CNN
 F 3 "" H 2350 2450 50  0001 C CNN
 	1    2350 2450
 	1    0    0    -1  
 $EndComp
+$Comp
+L Transistor_FET:IRF4905 Q2
+U 1 1 616DBDAF
+P 3350 1100
+F 0 "Q2" H 3555 1146 50  0000 L CNN
+F 1 "IRF4905" H 3555 1055 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 3550 1025 50  0001 L CIN
+F 3 "http://www.infineon.com/dgdl/irf4905.pdf?fileId=5546d462533600a4015355e32165197c" H 3350 1100 50  0001 L CNN
+	1    3350 1100
+	1    0    0    -1  
+$EndComp
+Text Label 3450 900  0    50   ~ 0
+B+
+Text Label 3150 800  0    50   ~ 0
+CUTOFF
+Text Label 3250 1700 0    50   ~ 0
+BIN+
 Wire Wire Line
-	7800 2050 7450 2050
+	3450 1700 3450 1300
+Wire Wire Line
+	3250 1700 3450 1700
+$Comp
+L Device:R R8
+U 1 1 616FC2A8
+P 3150 950
+F 0 "R8" H 3200 950 50  0000 L CNN
+F 1 "100R" V 3150 850 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 3080 950 50  0001 C CNN
+F 3 "~" H 3150 950 50  0001 C CNN
+	1    3150 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 616FD045
+P 3150 1250
+F 0 "R7" H 3200 1250 50  0000 L CNN
+F 1 "10K" V 3150 1150 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 3080 1250 50  0001 C CNN
+F 3 "~" H 3150 1250 50  0001 C CNN
+	1    3150 1250
+	1    0    0    -1  
+$EndComp
+Connection ~ 3150 1100
+$Comp
+L power:GNDD #PWR0126
+U 1 1 616FFF6B
+P 3150 1400
+F 0 "#PWR0126" H 3150 1150 50  0001 C CNN
+F 1 "GNDD" H 3154 1245 50  0000 C CNN
+F 2 "" H 3150 1400 50  0001 C CNN
+F 3 "" H 3150 1400 50  0001 C CNN
+	1    3150 1400
+	1    0    0    -1  
+$EndComp
+Text Label 7000 1700 0    50   ~ 0
+CUTOFF
+Connection ~ 2350 1750
+Wire Wire Line
+	1100 1750 2350 1750
+$Comp
+L Device:R R3
+U 1 1 6173721B
+P 2350 1900
+F 0 "R3" H 2420 1946 50  0000 L CNN
+F 1 "1R, 40-50W" H 2420 1855 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_Power_L48.0mm_W12.5mm_P55.88mm" V 2280 1900 50  0001 C CNN
+F 3 "~" H 2350 1900 50  0001 C CNN
+	1    2350 1900
+	1    0    0    -1  
+$EndComp
+Text Notes 1100 1950 0    50   ~ 0
+Parallel multiple 10W resistors \nto make 40-50W\n
 $EndSCHEMATC
