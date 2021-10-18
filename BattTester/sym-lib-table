@@ -1,4 +1,5 @@
 (sym_lib_table
   (lib (name BattTester)(type Legacy)(uri ${KIPRJMOD}/BattTester.lib)(options "")(descr ""))
-  (lib (name LM358AN)(type Legacy)(uri D:/Documents/GitHub/BattTester/BattTester/LM358AN.lib)(options "")(descr ""))
+  (lib (name LM358AN)(type Legacy)(uri ${KIPRJMOD}/LM358AN.lib)(options "")(descr ""))
+  (lib (name BattTester-rescue)(type Legacy)(uri ${KIPRJMOD}/BattTester-rescue.lib)(options "")(descr ""))
 )
