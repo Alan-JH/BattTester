@@ -90,10 +90,6 @@ Wire Wire Line
 Wire Wire Line
 	4550 900  3700 900 
 Wire Wire Line
-	3400 1900 3400 1800
-Wire Wire Line
-	3400 1800 3250 1800
-Wire Wire Line
 	3700 1900 3700 1800
 Wire Wire Line
 	6400 800  6400 750 
@@ -658,8 +654,6 @@ $EndComp
 Wire Wire Line
 	1000 1150 1100 1150
 Wire Wire Line
-	3400 1900 3700 1900
-Wire Wire Line
 	3250 1700 3700 1700
 $Comp
 L BattTester:LT1286CN8 U1
@@ -851,4 +845,7 @@ F 3 "" H 2350 2450 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7800 2050 7450 2050
+Connection ~ 3700 1800
+Wire Wire Line
+	3250 1800 3700 1800
 $EndSCHEMATC
