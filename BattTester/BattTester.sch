@@ -915,8 +915,6 @@ F 3 "~" H 3900 950 50  0001 C CNN
 	1    3900 950 
 	1    0    0    -1  
 $EndComp
-Text Label 3300 1700 0    50   ~ 0
-BIN+
 Text Label 3900 800  0    50   ~ 0
 CUTOFF
 $Comp
@@ -932,4 +930,82 @@ F 3 "http://www.infineon.com/dgdl/irf4905.pdf?fileId=5546d462533600a4015355e3216
 $EndComp
 Text Label 4200 1700 2    50   ~ 0
 B+
+$Comp
+L Amplifier_Current:LT6106 U?
+U 1 1 61967F7F
+P 7800 3400
+F 0 "U?" H 8144 3446 50  0000 L CNN
+F 1 "LT6106" H 8144 3355 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 7800 3400 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/6106fb.pdf" H 7850 3600 50  0001 C CNN
+	1    7800 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6196A136
+P 6900 3400
+F 0 "R?" H 6950 3400 50  0000 L CNN
+F 1 "10m" V 6900 3300 50  0000 L CNN
+F 2 "" V 6830 3400 50  0001 C CNN
+F 3 "~" H 6900 3400 50  0001 C CNN
+	1    6900 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6196AB0E
+P 7150 3250
+F 0 "R?" V 7050 3250 50  0000 C CNN
+F 1 "100R" V 7150 3250 50  0000 C CNN
+F 2 "" V 7080 3250 50  0001 C CNN
+F 3 "~" H 7150 3250 50  0001 C CNN
+	1    7150 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6196BAA8
+P 8100 3550
+F 0 "R?" H 8150 3550 50  0000 L CNN
+F 1 "2K" V 8100 3500 50  0000 L CNN
+F 2 "" V 8030 3550 50  0001 C CNN
+F 3 "~" H 8100 3550 50  0001 C CNN
+	1    8100 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 3250 7000 3250
+Wire Wire Line
+	6900 3550 7300 3550
+Wire Wire Line
+	7300 3250 7500 3500
+Wire Wire Line
+	7300 3550 7500 3300
+Wire Wire Line
+	7700 3100 6900 3100
+Wire Wire Line
+	6900 3100 6900 3250
+Connection ~ 6900 3250
+$Comp
+L power:GNDD #PWR?
+U 1 1 61978BAC
+P 7700 3700
+F 0 "#PWR?" H 7700 3450 50  0001 C CNN
+F 1 "GNDD" H 7704 3545 50  0000 C CNN
+F 2 "" H 7700 3700 50  0001 C CNN
+F 3 "" H 7700 3700 50  0001 C CNN
+	1    7700 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 3700 8100 3700
+Connection ~ 7700 3700
+Text Label 8350 3400 0    50   ~ 0
+I_OUT
+Wire Wire Line
+	8100 3400 8350 3400
+Connection ~ 8100 3400
+Text Label 3300 1700 0    50   ~ 0
+BIN+
 $EndSCHEMATC
