@@ -4,6 +4,8 @@
 #define CUTOFF 2
 #define ADCCS 0
 #define SDCS 1
+#define I_PIN 3
+#define OCP 8 //Overcurrent, in amps
 #define V_SUPPLY 9
 #define V_CUTOFF 6.144
 #define SAMPLE_INTERVAL 10
@@ -12,6 +14,7 @@ bool reading = true;
 uint16_t adcCount;
 float voltage = V_SUPPLY;
 int readTime;
+int current;
 
 void setup() {
   pinMode(CUTOFF, OUTPUT);
@@ -20,7 +23,8 @@ void setup() {
 }
 
 void loop() {
-  if (voltage < V_CUTOFF){
+  current = 3.3 * analogRead(I_PIN) / 4096.0 //todo, convert volts to amps
+  if (voltage < V_CUTOFF || current > OCP){
     digitalWrite(CUTOFF, LOW); //open cutoff mosfet
   }
   else
