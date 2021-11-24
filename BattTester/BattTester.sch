@@ -376,17 +376,6 @@ F 3 "" H 1450 4300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Regulator_Linear:IFX27001TFV33 U3
-U 1 1 616F6C6D
-P 1750 3600
-F 0 "U3" H 1750 3867 50  0000 C CNN
-F 1 "LD1086DT33" H 1750 3776 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:TO-252-3_TabPin2" H 1750 3550 50  0001 C CNN
-F 3 "https://static6.arrow.com/aropdfconversion/dc75757ae45a88e5f69bdce3f2a651a5fe0ca07d/ifx27001_ds_10.pdf" H 1750 3550 50  0001 C CNN
-	1    1750 3600
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C5
 U 1 1 616FB10C
 P 1150 3750
@@ -1018,4 +1007,15 @@ Text Label 6900 3550 3    50   ~ 0
 ISH-
 Text Label 7500 1800 0    50   ~ 0
 I_OUT
+$Comp
+L Regulator_Linear:LM1117-3.3 U3
+U 1 1 619E8D3F
+P 1750 3600
+F 0 "U3" H 1750 3842 50  0000 C CNN
+F 1 "LM1117-3.3" H 1750 3751 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 1750 3600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm1117.pdf" H 1750 3600 50  0001 C CNN
+	1    1750 3600
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
