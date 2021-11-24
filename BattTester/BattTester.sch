@@ -987,10 +987,8 @@ $EndComp
 Wire Wire Line
 	7700 3700 8100 3700
 Connection ~ 7700 3700
-Text Label 8350 3400 0    50   ~ 0
+Text Label 8600 3400 0    50   ~ 0
 I_OUT
-Wire Wire Line
-	8100 3400 8350 3400
 Connection ~ 8100 3400
 Text Label 3300 1700 1    50   ~ 0
 ISH+
@@ -1018,4 +1016,22 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm1117.pdf" H 1750 3600 50  0001 C CNN
 	1    1750 3600
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector:TestPoint_2Pole TP1
+U 1 1 619EDCE6
+P 8600 3600
+F 0 "TP1" V 8554 3658 50  0000 L CNN
+F 1 "Current measurement" V 8645 3658 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8600 3600 50  0001 C CNN
+F 3 "~" H 8600 3600 50  0001 C CNN
+	1    8600 3600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8100 3400 8600 3400
+Wire Wire Line
+	8600 3800 8100 3800
+Wire Wire Line
+	8100 3800 8100 3700
+Connection ~ 8100 3700
 $EndSCHEMATC
