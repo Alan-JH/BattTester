@@ -532,55 +532,14 @@ $EndComp
 Wire Wire Line
 	1700 1250 2050 1250
 $Comp
-L LM358AN:LM358AN_NOPB U4
-U 1 1 6172AB33
-P 1100 1150
-F 0 "U4" H 1744 1096 50  0000 L CNN
-F 1 "LM358AN" H 1744 1005 50  0000 L CNN
-F 2 "BattTester:DIP8" H 1100 1550 50  0001 L CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm358-n.pdf" H 1100 1650 50  0001 L CNN
-F 4 "No" H 1100 1750 50  0001 L CNN "automotive"
-F 5 "IC" H 1100 1850 50  0001 L CNN "category"
-F 6 "Integrated Circuits (ICs)" H 1100 1950 50  0001 L CNN "device class L1"
-F 7 "Linear ICs" H 1100 2050 50  0001 L CNN "device class L2"
-F 8 "Amplifiers - Op Amps" H 1100 2150 50  0001 L CNN "device class L3"
-F 9 "IC OPAMP GP 2 CIRCUIT 8DIP" H 1100 2250 50  0001 L CNN "digikey description"
-F 10 "LM358ANNS/NOPB-ND" H 1100 2350 50  0001 L CNN "digikey part number"
-F 11 "1MHz" H 1100 2450 50  0001 L CNN "gain bandwidth"
-F 12 "5.08mm" H 1100 2550 50  0001 L CNN "height"
-F 13 "0.045uA" H 1100 2650 50  0001 L CNN "input bias current"
-F 14 "2mV" H 1100 2750 50  0001 L CNN "input offset voltage"
-F 15 "DIP794W46P254L1016H508Q8" H 1100 2850 50  0001 L CNN "ipc land pattern name"
-F 16 "Yes" H 1100 2950 50  0001 L CNN "lead free"
-F 17 "14e3c34b0210167e" H 1100 3050 50  0001 L CNN "library id"
-F 18 "Texas Instruments" H 1100 3150 50  0001 L CNN "manufacturer"
-F 19 "16V" H 1100 3250 50  0001 L CNN "max dual supply voltage"
-F 20 "32V" H 1100 3350 50  0001 L CNN "max supply voltage"
-F 21 "1.5V" H 1100 3450 50  0001 L CNN "min dual supply voltage"
-F 22 "3V" H 1100 3550 50  0001 L CNN "min supply voltage"
-F 23 "Operational Amplifiers - Op Amps LOW PWR DUAL OP AMP\\n" H 1100 3650 50  0001 L CNN "mouser description"
-F 24 "926-LM358AN/NOPB" H 1100 3750 50  0001 L CNN "mouser part number"
-F 25 "0.5-1mA" H 1100 3850 50  0001 L CNN "nominal supply current"
-F 26 "2" H 1100 3950 50  0001 L CNN "number of channels"
-F 27 "20mA" H 1100 4050 50  0001 L CNN "output current per channel"
-F 28 "DIP8" H 1100 4150 50  0001 L CNN "package"
-F 29 "Yes" H 1100 4250 50  0001 L CNN "rohs"
-F 30 "0.51mm" H 1100 4350 50  0001 L CNN "standoff height"
-F 31 "+70°C" H 1100 4450 50  0001 L CNN "temperature range high"
-F 32 "0°C" H 1100 4550 50  0001 L CNN "temperature range low"
-F 33 "100V/mV" H 1100 4650 50  0001 L CNN "voltage gain"
-	1    1100 1150
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GNDA #PWR0121
 U 1 1 617306EB
-P 1400 1450
-F 0 "#PWR0121" H 1400 1200 50  0001 C CNN
-F 1 "GNDA" H 1405 1277 50  0000 C CNN
-F 2 "" H 1400 1450 50  0001 C CNN
-F 3 "" H 1400 1450 50  0001 C CNN
-	1    1400 1450
+P 1750 1550
+F 0 "#PWR0121" H 1750 1300 50  0001 C CNN
+F 1 "GNDA" H 1755 1377 50  0000 C CNN
+F 2 "" H 1750 1550 50  0001 C CNN
+F 3 "" H 1750 1550 50  0001 C CNN
+	1    1750 1550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -637,12 +596,12 @@ $EndComp
 $Comp
 L power:+9V #PWR0120
 U 1 1 616CDCCB
-P 1400 1050
-F 0 "#PWR0120" H 1400 900 50  0001 C CNN
-F 1 "+9V" H 1415 1223 50  0000 C CNN
-F 2 "" H 1400 1050 50  0001 C CNN
-F 3 "" H 1400 1050 50  0001 C CNN
-	1    1400 1050
+P 1750 950
+F 0 "#PWR0120" H 1750 800 50  0001 C CNN
+F 1 "+9V" H 1765 1123 50  0000 C CNN
+F 2 "" H 1750 950 50  0001 C CNN
+F 3 "" H 1750 950 50  0001 C CNN
+	1    1750 950 
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -987,10 +946,8 @@ $EndComp
 Wire Wire Line
 	7700 3700 8100 3700
 Connection ~ 7700 3700
-Text Label 8350 3400 0    50   ~ 0
+Text Label 8600 3400 0    50   ~ 0
 I_OUT
-Wire Wire Line
-	8100 3400 8350 3400
 Connection ~ 8100 3400
 Text Label 3300 1700 1    50   ~ 0
 ISH+
@@ -1018,4 +975,74 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm1117.pdf" H 1750 3600 50  0001 C CNN
 	1    1750 3600
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector:TestPoint_2Pole TP1
+U 1 1 619EDCE6
+P 8600 3600
+F 0 "TP1" V 8554 3658 50  0000 L CNN
+F 1 "Current measurement" V 8645 3658 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8600 3600 50  0001 C CNN
+F 3 "~" H 8600 3600 50  0001 C CNN
+	1    8600 3600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8100 3400 8600 3400
+Wire Wire Line
+	8600 3800 8100 3800
+Wire Wire Line
+	8100 3800 8100 3700
+Connection ~ 8100 3700
+$Comp
+L Amplifier_Operational:LM358 U4
+U 1 1 61A1DDF7
+P 1400 1250
+F 0 "U4" H 1400 1617 50  0000 C CNN
+F 1 "LM358" H 1400 1526 50  0000 C CNN
+F 2 "" H 1400 1250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 1400 1250 50  0001 C CNN
+	1    1400 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM358 U4
+U 2 1 61A2D42F
+P 900 2050
+F 0 "U4" H 900 2417 50  0000 C CNN
+F 1 "LM358" H 900 2326 50  0000 C CNN
+F 2 "" H 900 2050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 900 2050 50  0001 C CNN
+	2    900  2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM358 U4
+U 3 1 61A31D94
+P 1850 1250
+F 0 "U4" H 1808 1296 50  0000 L CNN
+F 1 "LM358" H 1808 1205 50  0000 L CNN
+F 2 "" H 1850 1250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 1850 1250 50  0001 C CNN
+	3    1850 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 2050 1200 2300
+Wire Wire Line
+	1200 2300 600  2300
+Wire Wire Line
+	600  2300 600  2150
+$Comp
+L power:GNDA #PWR?
+U 1 1 61A41730
+P 550 1950
+F 0 "#PWR?" H 550 1700 50  0001 C CNN
+F 1 "GNDA" H 555 1777 50  0000 C CNN
+F 2 "" H 550 1950 50  0001 C CNN
+F 3 "" H 550 1950 50  0001 C CNN
+	1    550  1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	550  1950 600  1950
 $EndSCHEMATC
